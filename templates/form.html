@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>User Input Form</title>
+</head>
+<body>
+{% extends "layout.html" %}
+    {% block content %}
+        <div class="container">
+        <form action="/display" method="post" id="employForm"
+        <fieldset>
+        <label>First Name
+          <input type="text" name="firstName" placeholder="Joe" required>
+        </label>
+        <label>Last Name
+          <input type="text" name="lastName" id="lastName" placeholder="Schmoe" required>
+        </label>
+
+        <label>
+        Department
+          <select name="department" required>
+            <option value="sales">Sales</option>
+            <option value="marketing">Marketing</option>
+            <option value="developer">Developer</option>
+            <option value="business">Business Relations</option>
+            <option value="sysAdmin">Systems Administration</option>
+            <option value="drone">Drone</option>
+          </select>
+        </label>
+            ... goes on
+        </fieldset>
+      <button class="button-primary" type="submit" value="Submit" form="employForm">SUBMIT!</button>
+    </form>
+  </div>
+    {% endblock %}
+</body>
+</html>
